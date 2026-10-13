@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-ivory: #FAF7F2;
+    --color-gold: #C6A15B;
+    --color-gold-light: #E6C280;
+    --color-gold-dark: #A9843E;
+    --color-forest: #173D32;
+    --color-forest-dark: #0E2921;
+    --color-olive: #5B6B54;
+    --color-wine: #571C24;
+    --color-charcoal: #222222;
+    --color-muted: #6B685F;
+    --paper-shadow: 0 10px 30px -5px rgba(23, 61, 50, 0.08), 0 4px 12px -2px rgba(198, 161, 91, 0.06);
+  }
+
+  body {
+    font-family: 'DM Sans', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #FAF7F2;
+    color: #222222;
+    letter-spacing: 0.01em;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    letter-spacing: 0.01em;
+  }
+}
+
+.font-display {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-script {
+  font-family: 'Great Vibes', 'Alex Brush', cursive;
+}
+
+.font-calligraphy {
+  font-family: 'Alex Brush', 'Great Vibes', cursive;
+}
+
+.font-sans-editorial {
+  font-family: 'DM Sans', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Gold Accents & Borders */
+.gold-border {
+  border-color: rgba(198, 161, 91, 0.35);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #D4AF37 0%, #C6A15B 50%, #E6C280 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Luxury Foil Buttons */
+.gold-button {
+  background: linear-gradient(135deg, #C6A15B 0%, #B88E43 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px 0 rgba(198, 161, 91, 0.28);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-button:hover {
+  background: linear-gradient(135deg, #D4AF37 0%, #C6A15B 100%);
+  box-shadow: 0 6px 22px 0 rgba(198, 161, 91, 0.42);
+  transform: translateY(-2px);
+}
+
+.forest-button {
+  background: linear-gradient(135deg, #173D32 0%, #0E2921 100%);
+  color: #FAF7F2;
+  box-shadow: 0 4px 14px 0 rgba(14, 41, 33, 0.3);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.forest-button:hover {
+  background: linear-gradient(135deg, #1E4D3F 0%, #173D32 100%);
+  box-shadow: 0 6px 20px 0 rgba(14, 41, 33, 0.45);
+  transform: translateY(-2px);
+}
+
+/* Realistic 3D Wax Seal */
+.wax-seal {
+  background: radial-gradient(circle at 35% 30%, #E6C280 0%, #C6A15B 45%, #8A6828 90%, #5E4314 100%);
+  color: #FFFFFF;
+  border: 3px double #C6A15B;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35), inset 0 2px 4px rgba(255, 255, 255, 0.5), inset 0 -3px 6px rgba(0, 0, 0, 0.45);
+  border-radius: 47% 53% 50% 49% / 52% 48% 52% 48%;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wax-seal:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05) rotate(3deg);
+}
+
+.wax-seal-olive {
+  background: radial-gradient(circle at 35% 30%, #788059 0%, #5B6B54 50%, #3D4838 90%, #2A3226 100%);
+  color: #FAF7F2;
+  border: 3px double #788059;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35), inset 0 2px 4px rgba(255, 255, 255, 0.4), inset 0 -3px 6px rgba(0, 0, 0, 0.45);
+  border-radius: 48% 52% 49% 51% / 51% 49% 53% 47%;
+}
+
+/* Olive Draped Ribbon Tail */
+.ribbon-olive {
+  background: #5B6B54;
+  box-shadow: 0 4px 12px rgba(40, 50, 36, 0.35);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 86%, 0 100%);
+}
+
+.clip-path-chevron {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%);
+}
+
+/* Deckle Edge (Artisanal Torn Paper Border) */
+.deckle {
+  position: relative;
+}
+
+.deckle::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  height: 18px;
+  left: 0;
+  width: 100%;
+  background: #FAF7F2;
+  clip-path: polygon(
+    0 65%, 2% 45%, 4% 66%, 6% 30%, 8% 51%, 10% 30%, 12% 65%, 14% 36%, 16% 64%,
+    18% 30%, 20% 55%, 22% 43%, 24% 67%, 26% 40%, 28% 64%, 30% 39%, 32% 58%,
+    34% 30%, 36% 60%, 38% 40%, 40% 65%, 42% 32%, 44% 59%, 46% 39%, 48% 68%,
+    50% 35%, 52% 60%, 54% 40%, 56% 64%, 58% 32%, 60% 61%, 62% 40%, 64% 66%,
+    66% 37%, 68% 62%, 70% 32%, 72% 60%, 74% 36%, 76% 65%, 78% 30%, 80% 56%,
+    82% 40%, 84% 64%, 86% 37%, 88% 59%, 90% 33%, 92% 59%, 94% 39%, 96% 65%,
+    98% 40%, 100% 61%, 100% 100%, 0 100%
+  );
+  z-index: 20;
+}
+
+/* Parchment Stationery Card */
+.parchment-card {
+  background: #FCFAF6;
+  background-image: 
+    radial-gradient(circle at 100% 100%, rgba(198, 161, 91, 0.03) 0%, transparent 60%),
+    radial-gradient(circle at 0% 0%, rgba(91, 107, 84, 0.02) 0%, transparent 50%);
+  border: 1px solid rgba(198, 161, 91, 0.3);
+  box-shadow: 0 16px 40px -10px rgba(23, 61, 50, 0.08), 0 4px 12px -2px rgba(198, 161, 91, 0.06);
+}
+
+/* Botanical Watermark Background */
+.botanical-watermark {
+  background-image: radial-gradient(#C6A15B 0.75px, transparent 0.75px);
+  background-size: 24px 24px;
+  opacity: 0.25;
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #F4EFE6;
+}
+::-webkit-scrollbar-thumb {
+  background: #C6A15B;
+  border-radius: 5px;
+  border: 2px solid #F4EFE6;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A9843E;
+}
+
+/* Fairy Lights & Bokeh Floating Glow Animations */
+@keyframes bokehDrift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.55;
+  }
+  33% {
+    transform: translate(12px, -18px) scale(1.15);
+    opacity: 0.85;
+  }
+  66% {
+    transform: translate(-10px, -30px) scale(0.9);
+    opacity: 0.6;
+  }
+}
+
+@keyframes fairyTwinkle {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.85);
+    filter: drop-shadow(0 0 4px rgba(255, 230, 160, 0.4));
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.25);
+    filter: drop-shadow(0 0 16px rgba(255, 230, 180, 0.95));
+  }
+}
+
+.bokeh-orb-1 {
+  animation: bokehDrift 8s ease-in-out infinite;
+}
+.bokeh-orb-2 {
+  animation: bokehDrift 11s ease-in-out infinite reverse;
+}
+.bokeh-orb-3 {
+  animation: bokehDrift 9.5s ease-in-out infinite 2s;
+}
+
+.fairy-twinkle-fast {
+  animation: fairyTwinkle 2.5s ease-in-out infinite;
+}
+.fairy-twinkle-slow {
+  animation: fairyTwinkle 4.5s ease-in-out infinite 1.2s;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "The Grand Veda Estate & Celebration Resort",
+  "description": "Luxury 5-Star Hotel, Marriage Garden, Royal Banquet Hall & Celebration Resort for weddings, anniversaries, birthdays, and memorable stays.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
